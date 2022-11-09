@@ -16,15 +16,15 @@
             <input type="text" id="dauvao">
         </th>
         <th>
-            <select id="1">
-                <option value="VN">VNĐ</option>
-                <option value="US">USD</option>
+            <select id="gtm">
+                <option value="1">VNĐ</option>
+                <option value="23000">USD</option>
             </select>
         </th>
         <th>
-            <select id="2">
-                <option value="VN">VNĐ</option>
-                <option value="US">USD</option>
+            <select id="gtn">
+                <option value="1">VNĐ</option>
+                <option value="23000">USD</option>
             </select>
         </th>
         <td>
@@ -32,17 +32,15 @@
         </td>
     </tr>
 </table>
+<br>
+<p id="kq"></p>
 <script>
     function an() {
-        let giatrivao = document.getElementById('dauvao').value;
-        let select1 = document.getElementById('1').value;
-        let select2 = document.getElementById('2').value;
-        if (select1 == select2) {
-            alert(giatrivao);
-        }
-        if (select1 == "VN" && select2 == "US") {
-            alert(giatrivao / 24000);
-        }
+        let giatrivao = +document.getElementById('dauvao').value;
+        let gtm = +document.getElementById('gtm').value;
+        let gtn = +document.getElementById('gtn').value;
+        let Result = dauvao * gtn / gtm ;
+        document.getElementById('kq').innerHTML = Result;
     }
 
 </script>
